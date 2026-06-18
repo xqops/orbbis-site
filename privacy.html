@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — Orbbis</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0e0d0b;--bg2:#141210;--bg3:#1c1a16;--bg4:#242018;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
+  --ink:#ede9e3;--muted:#b0aba3;--dim:#6b6760;
+  --purple:#7c3aed;--purplel:#a78bfa;--purplegl:rgba(124,58,237,0.12);
+  --green:#22c55e;--red:#ef4444;
+  --purplem:#8b5cf6;
+}
+html[data-theme="light"]{
+  --bg:#f4f2ef;--bg2:#eceae6;--bg3:#e4e1dc;--bg4:#dbd8d2;
+  --border:rgba(0,0,0,0.07);--border2:rgba(0,0,0,0.13);
+  --ink:#2d2a26;--muted:#5a5650;--dim:#8a8680;
+}
+html,body{min-height:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-size:14px;display:flex;flex-direction:column}
+
+/* ── PARTICLES ── */
+#particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.particle{position:absolute;width:2px;height:2px;border-radius:50%;background:var(--purple);opacity:0;animation:floatUp linear infinite}
+@keyframes floatUp{0%{opacity:0;transform:translateY(0) scale(0)}20%{opacity:.6}80%{opacity:.3}100%{opacity:0;transform:translateY(-100vh) scale(1.5)}}
+
+/* ── NAV ── */
+.topnav{height:72px;background:rgba(244,242,239,0.82);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:100;position:sticky;top:0;transition:background .3s}
+html[data-theme="dark"] .topnav{background:rgba(14,13,11,0.88)}
+.nav-logo{font-family:'Orbitron',sans-serif;font-weight:900;font-size:16px;color:var(--ink)!important;text-decoration:none;letter-spacing:1px;display:inline-flex;align-items:center;gap:8px}
+.nav-right{display:flex;align-items:center;gap:10px}
+.btn-xs{font-size:13px;font-weight:600;padding:8px 18px;border-radius:10px;border:1px solid var(--border2);background:transparent;color:var(--muted);cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif;text-decoration:none}
+.btn-xs:hover{color:var(--ink);border-color:var(--purple)}
+.theme-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--border2);background:transparent;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.theme-btn:hover{background:var(--bg3)}
+
+/* ── LOGO TECH ── */
+.logo-orbit{position:relative;width:22px;height:22px;flex-shrink:0}
+.orbit-ring{animation:orbit-spin 3s linear infinite;transform-origin:50% 50%}
+.orbit-ring2{animation:orbit-spin 5s linear infinite reverse;transform-origin:50% 50%}
+@keyframes orbit-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.logo-text{font-family:'Orbitron',sans-serif;font-size:16px;font-weight:900;letter-spacing:1px;position:relative}
+.logo-text .glitch{position:relative;color:var(--ink)}
+.logo-text .glitch::before,.logo-text .glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%}
+.logo-text .glitch::before{color:#a78bfa;animation:glitch1 4s infinite;clip-path:polygon(0 0,100% 0,100% 35%,0 35%)}
+.logo-text .glitch::after{color:#7c3aed;animation:glitch2 4s infinite;clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%)}
+@keyframes glitch1{0%,90%,100%{transform:translate(0)}92%{transform:translate(-2px,1px)}94%{transform:translate(2px,-1px)}96%{transform:translate(-1px,0)}}
+@keyframes glitch2{0%,90%,100%{transform:translate(0)}92%{transform:translate(2px,1px)}94%{transform:translate(-2px,-1px)}96%{transform:translate(1px,0)}}
+.logo-text .xx{color:var(--purple);-webkit-text-fill-color:var(--purple)}
+
+/* ── CONTENT ── */
+.page-wrap{max-width:760px;margin:0 auto;padding:64px 24px 96px;position:relative;z-index:1;flex:1}
+.page-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--purplel);background:var(--purplegl);border:1px solid rgba(124,58,237,0.2);padding:3px 10px;border-radius:999px;margin-bottom:18px}
+.page-title{font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:800;letter-spacing:-.8px;color:var(--ink);margin-bottom:10px;line-height:1.15}
+.page-meta{font-size:12px;color:var(--dim);margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.page-meta span{color:var(--muted)}
+
+.section{margin-bottom:40px}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.section-title::before{content:'';display:inline-block;width:3px;height:18px;background:var(--purple);border-radius:2px;flex-shrink:0}
+p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:10px}
+ul,ol{padding-left:20px;margin-bottom:10px}
+li{font-size:14px;color:var(--muted);line-height:1.8}
+strong{color:var(--ink);font-weight:600}
+a{color:var(--purplel);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.highlight-box{background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:16px 20px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
+.highlight-box .icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.highlight-box p{margin:0;color:var(--muted)}
+
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:5px;background:var(--purplegl);color:var(--purplel);border:1px solid rgba(124,58,237,0.2);margin-right:4px;margin-bottom:4px}
+.tag.green{background:rgba(34,197,94,0.1);color:var(--green);border-color:rgba(34,197,94,0.2)}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:28px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;position:relative;z-index:1}
+.footer-copy{font-size:12px;color:var(--dim)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:12px;color:var(--dim);text-decoration:none;transition:color .15s}
+.footer-links a:hover{color:var(--ink)}
+
+@media(max-width:640px){
+  .topnav{padding:0 16px}
+  .page-wrap{padding:40px 16px 72px}
+  .page-title{font-size:28px}
+  footer{padding:20px 16px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div id="particles"></div>
+
+<nav class="topnav">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-orbit">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:22px;height:22px">
+        <circle cx="14" cy="14" r="3" fill="#a78bfa" opacity="0.9"/>
+        <g class="orbit-ring">
+          <ellipse cx="14" cy="14" rx="11" ry="5" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3 2" opacity="0.7" fill="none"/>
+          <circle cx="25" cy="14" r="1.8" fill="#a78bfa"/>
+        </g>
+        <g class="orbit-ring2">
+          <ellipse cx="14" cy="14" rx="6" ry="11" stroke="#a78bfa" stroke-width="0.8" stroke-dasharray="2 3" opacity="0.5" fill="none"/>
+          <circle cx="14" cy="3" r="1.4" fill="#c4b5fd"/>
+        </g>
+      </svg>
+    </div>
+    <div class="logo-text"><span class="glitch" data-text="Orbbis">Orbb<span class="xx">i</span>s</span></div>
+  </a>
+  <div class="nav-right">
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">☀️</button>
+    <a href="index.html" class="btn-xs">← Back to home</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-badge">Legal</div>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-meta">Last updated: <span>June 17, 2025</span> &nbsp;·&nbsp; Effective immediately</p>
+
+  <div class="highlight-box">
+    <div class="icon">🔒</div>
+    <p><strong>The short version:</strong> Orbbis runs entirely in your browser. We do not collect, store, or transmit your Discord bot token or any personal data to our servers. Everything stays on your device.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">1. Who We Are</h2>
+    <p>Orbbis ("we", "us", or "our") is a free, browser-based Discord bot configuration tool available at <strong>orbbis.app</strong>. It allows users to configure and download a ready-to-run Discord bot without writing code.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">2. Information We Do Not Collect</h2>
+    <p>Orbbis is a fully client-side application. We do <strong>not</strong> collect, receive, store, or process:</p>
+    <ul>
+      <li>Your Discord bot token</li>
+      <li>Your Discord account information</li>
+      <li>Bot configuration data (commands, responses, settings)</li>
+      <li>Project files you save or import (<code>.orbbis.json</code>)</li>
+      <li>Any personally identifiable information (PII)</li>
+    </ul>
+    <p>All data you enter in the editor is stored exclusively in your browser's memory and is cleared when you close the tab.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">3. How the Editor Works</h2>
+    <p>When you use Orbbis:</p>
+    <ul>
+      <li><strong>Token validation</strong> — your token is sent directly from your browser to Discord's API (<code>https://discord.com/api/</code>) to fetch your bot's name and avatar. It is never sent to Orbbis servers.</li>
+      <li><strong>File generation</strong> — your bot's ZIP file is generated entirely in your browser using JavaScript. No file is uploaded to any server.</li>
+      <li><strong>Image uploads</strong> — if you upload a custom image for a bot response, it is sent to <a href="https://imgbb.com" target="_blank">ImgBB</a>, a third-party image hosting service. Please review <a href="https://imgbb.com/tos" target="_blank">ImgBB's Terms of Service</a>.</li>
+      <li><strong>Project save/import</strong> — the <code>.orbbis.json</code> project file is downloaded to and read from your local machine only.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">4. Cookies & Local Storage</h2>
+    <p>Orbbis does not use tracking cookies or advertising cookies. We may use the browser's <strong>localStorage</strong> solely to remember your theme preference (dark or light mode) across sessions. This data never leaves your device.</p>
+    <div style="margin-top:12px">
+      <span class="tag green">localStorage</span>
+      <span class="tag green">Theme preference only</span>
+      <span class="tag green">Never transmitted</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">5. Third-Party Services</h2>
+    <p>Orbbis may load resources from the following third-party services:</p>
+    <ul>
+      <li><strong>Google Fonts</strong> — to load the Inter, Space Grotesk, and Orbitron typefaces. Google may collect limited usage data. See <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+      <li><strong>Discord API</strong> — for bot token validation only, initiated directly by your browser. See <a href="https://discord.com/privacy" target="_blank">Discord's Privacy Policy</a>.</li>
+      <li><strong>ImgBB</strong> — only if you choose to upload an image. See <a href="https://imgbb.com/tos" target="_blank">ImgBB's Terms of Service</a>.</li>
+    </ul>
+    <p>We do not integrate any analytics, advertising, or tracking services.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">6. Children's Privacy</h2>
+    <p>Orbbis is not directed to children under the age of 13. We do not knowingly collect any information from children. If you believe a child has used our service, please note that no personal data is collected or retained by us.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">7. Security</h2>
+    <p>Because Orbbis does not transmit or store your data on any server, the risk of a data breach on our end is zero. Your bot token and configuration are only ever present in your browser's memory during your session.</p>
+    <p>We strongly recommend keeping your bot token private and regenerating it in the <a href="https://discord.com/developers/applications" target="_blank">Discord Developer Portal</a> if you believe it has been compromised.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last updated" date at the top of this page. We encourage you to review this page periodically.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">9. Contact</h2>
+    <p>If you have any questions about this Privacy Policy, you can reach us via our <a href="https://discord.gg/3NZF5d3Ugk" target="_blank">Discord community server</a> or by opening an issue on our public repository.</p>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2025 Orbbis. Free forever · No account needed.</span>
+  <div class="footer-links">
+    <a href="#">Docs</a>
+    <a href="#">Discord</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const canvas=document.getElementById('particles');
+  for(let i=0;i<18;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    p.style.cssText=`left:${Math.random()*100}%;width:${1+Math.random()*2}px;height:${1+Math.random()*2}px;animation-duration:${6+Math.random()*10}s;animation-delay:${Math.random()*8}s;opacity:${0.2+Math.random()*0.4}`;
+    canvas.appendChild(p);
+  }
+})();
+
+function toggleTheme(){
+  const html=document.documentElement;
+  const isDark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',isDark?'light':'dark');
+  document.getElementById('theme-btn').textContent=isDark?'🌙':'☀️';
+  try{localStorage.setItem('orbbis-theme',isDark?'light':'dark')}catch(e){}
+}
+
+(function(){
+  try{
+    const t=localStorage.getItem('orbbis-theme');
+    if(t){
+      document.documentElement.setAttribute('data-theme',t);
+      document.getElementById('theme-btn').textContent=t==='dark'?'☀️':'🌙';
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
